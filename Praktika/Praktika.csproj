@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93FDD9D9-85D5-4591-A406-E86930FB17CA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Praktika</RootNamespace>
+    <AssemblyName>Praktika</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=2.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\SuperJMN.Extended.Wpf.Toolkit.2.6.1\lib\net45\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=2.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\SuperJMN.Extended.Wpf.Toolkit.2.6.1\lib\net45\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=2.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\SuperJMN.Extended.Wpf.Toolkit.2.6.1\lib\net45\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=2.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\SuperJMN.Extended.Wpf.Toolkit.2.6.1\lib\net45\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SuperJMN.Extended.Wpf.Toolkit.2.6.1\lib\net45\Xceed.Wpf.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SuperJMN.Extended.Wpf.Toolkit.2.6.1\lib\net45\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Avtorizacia.xaml.cs">
+      <DependentUpon>Avtorizacia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dannie.cs" />
+    <Compile Include="MeropriyatiaItem.cs" />
+    <Compile Include="Metodi.cs" />
+    <Compile Include="OknoOrganizatora.xaml.cs">
+      <DependentUpon>OknoOrganizatora.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Registracia.xaml.cs">
+      <DependentUpon>Registracia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resursi\DataBase\Aktivnosti.cs" />
+    <Compile Include="Resursi\DataBase\Aktivnosti_Meropriyatia.cs" />
+    <Compile Include="Resursi\DataBase\Aktivnosti_Polzovateli.cs" />
+    <Compile Include="Resursi\DataBase\DB.cs" />
+    <Compile Include="Resursi\DataBase\Goroda.cs" />
+    <Compile Include="Resursi\DataBase\Goroda_Meropriyatia.cs" />
+    <Compile Include="Resursi\DataBase\Meropriyatia.cs" />
+    <Compile Include="Resursi\DataBase\MeropriyatiaTipi.cs" />
+    <Compile Include="Resursi\DataBase\Napravleniya.cs" />
+    <Compile Include="Resursi\DataBase\Napravleniya_Polzovateli.cs" />
+    <Compile Include="Resursi\DataBase\Pol.cs" />
+    <Compile Include="Resursi\DataBase\Polzovateli.cs" />
+    <Compile Include="Resursi\DataBase\Polzovateli_MeropriyatiaTipi.cs" />
+    <Compile Include="Resursi\DataBase\Pol_Polzovateli.cs" />
+    <Compile Include="Resursi\DataBase\Roli.cs" />
+    <Compile Include="Resursi\DataBase\Roli_Polzovateli.cs" />
+    <Compile Include="Resursi\DataBase\Strana.cs" />
+    <Compile Include="Resursi\DataBase\Strana_Polzovateli.cs" />
+    <Compile Include="Resursi\DataBase\sysdiagrams.cs" />
+    <Compile Include="Resursi\Temi\Cveta.xaml.cs">
+      <DependentUpon>Cveta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resursi\Temi\Knopki.xaml.cs">
+      <DependentUpon>Knopki.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resursi\Temi\Texta.xaml.cs">
+      <DependentUpon>Texta.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Avtorizacia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="OknoOrganizatora.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registracia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resursi\Temi\Cveta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resursi\Temi\Knopki.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resursi\Temi\Texta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resursi\Foto\UchastnikiFoto\участники-3.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resursi\Foto\JuriFoto\foto1.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto10.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto11.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto12.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto13.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto14.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto15.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto16.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto17.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto18.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto19.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto2.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto20.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto21.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto22.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto23.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto24.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto25.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto26.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto27.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto28.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto29.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto3.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto30.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto4.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto5.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto6.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto7.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto8.jpg" />
+    <Resource Include="Resursi\Foto\JuriFoto\foto9.jpg" />
+    <Resource Include="Resursi\Foto\MeropriyatiaFoto\1.jpeg" />
+    <Resource Include="Resursi\Foto\MeropriyatiaFoto\10.jpg" />
+    <Resource Include="Resursi\Foto\MeropriyatiaFoto\11.jpg" />
+    <Resource Include="Resursi\Foto\MeropriyatiaFoto\12.jpg" />
+    <Resource Include="Resursi\Foto\MeropriyatiaFoto\13.jpg" />
+    <Resource Include="Resursi\Foto\MeropriyatiaFoto\14.png" />
+    <Resource Include="Resursi\Foto\MeropriyatiaFoto\15.jpg" />
+    <Resource Include="Resursi\Foto\MeropriyatiaFoto\16.jpg" />
+    <Resource Include="Resursi\Foto\MeropriyatiaFoto\17.jpg" />
+    <Resource Include="Resursi\Foto\MeropriyatiaFoto\18.jpeg" />
+    <Resource Include="Resursi\Foto\MeropriyatiaFoto\19.jpg" />
+    <Resource Include="Resursi\Foto\MeropriyatiaFoto\2.jpeg" />
+    <Resource Include="Resursi\Foto\MeropriyatiaFoto\20.jpg" />
+    <Resource Include="Resursi\Foto\MeropriyatiaFoto\3.jpeg" />
+    <Resource Include="Resursi\Foto\MeropriyatiaFoto\4.jpeg" />
+    <Resource Include="Resursi\Foto\MeropriyatiaFoto\5.png" />
+    <Resource Include="Resursi\Foto\MeropriyatiaFoto\6.jpg" />
+    <Resource Include="Resursi\Foto\MeropriyatiaFoto\7.jpg" />
+    <Resource Include="Resursi\Foto\MeropriyatiaFoto\8.jpeg" />
+    <Resource Include="Resursi\Foto\MeropriyatiaFoto\9.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto10.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto11.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto12.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto13.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto14.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto15.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto16.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto17.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto18.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto19.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto20.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto21.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto22.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto23.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto24.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto25.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto26.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto27.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto28.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto29.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto8.jpg" />
+    <Resource Include="Resursi\Foto\ModeratoriFoto\foto9.jpg" />
+    <Resource Include="Resursi\Foto\OrganizatoriFoto\foto1.jpg" />
+    <Resource Include="Resursi\Foto\OrganizatoriFoto\foto2.jpg" />
+    <Resource Include="Resursi\Foto\OrganizatoriFoto\foto3.jpg" />
+    <Resource Include="Resursi\Foto\OrganizatoriFoto\foto4.jpg" />
+    <Resource Include="Resursi\Foto\OrganizatoriFoto\foto5.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto1.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto10.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto11.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto12.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto13.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto14.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto15.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto16.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto17.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto18.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto19.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto2.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto20.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto21.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto22.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto23.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto24.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto25.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto26.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto27.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto28.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto29.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto3.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto30.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto31.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto32.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto33.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto34.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto35.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto36.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto37.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto38.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto39.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto4.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto40.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto41.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto42.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto43.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto44.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto45.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto46.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto47.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto48.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto49.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto5.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto50.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto51.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto52.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto53.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto54.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto55.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto56.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto57.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto58.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto59.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto6.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto60.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto61.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto62.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto63.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto64.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto65.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto66.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto67.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto68.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto69.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto7.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto70.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto8.jpg" />
+    <Resource Include="Resursi\Foto\UchastnikiFoto\foto9.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

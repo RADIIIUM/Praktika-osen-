@@ -1,0 +1,71 @@
+﻿<Window x:Class="Praktika.Avtorizacia"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Praktika"
+        mc:Ignorable="d"
+        Title="Avtorizacia" 
+        Height="450" 
+        Width="300"
+        MinHeight="450" 
+        MinWidth="300"
+        WindowStyle="ToolWindow"
+        Background="{DynamicResource VtoroyCvet}">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Foreground" Value="{DynamicResource VtoroyCvetTexta}" />
+        </Style>
+        <Style TargetType="PasswordBox">
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Foreground" Value="{DynamicResource VtoroyCvetTexta}" />
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+        <Label Style="{DynamicResource Paragraf1}"
+               Content="Авторизация"
+               DockPanel.Dock="Top"/>
+        <StackPanel>
+            <Label Style="{DynamicResource Text1}"
+                   Content="Логин" />
+            <TextBox x:Name="Login"/>
+            <Label Style="{DynamicResource Text1}"
+                   Content="Пароль" />
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="TBParol" Width="250" />
+                <PasswordBox x:Name="PBParol" Width="250"
+                         Margin="-260,0,0,0"/>
+                <CheckBox x:Name="PokazatParol"
+                          Unchecked="PokazatParol_Unchecked"
+                          Checked="PokazatParol_Checked"
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Center"
+                          />
+            </StackPanel>
+            <Button Style="{DynamicResource StilKnopki1}"
+                    Height="50"
+                    Content="Авторизация"
+                    Width="200"
+                    VerticalAlignment="Bottom"
+                    Margin="0,20,0,0"
+                    x:Name="AvtorizaciaButton"
+                    Click="AvtorizaciaButton_Click"/>
+
+            <Button Style="{DynamicResource StilKnopki2}"
+                    Height="40"
+                    Content="В главное меню"
+                    Width="160"
+                    VerticalAlignment="Bottom"
+                    Margin="0,10,0,0"
+                    x:Name="GlavnoeMenu"
+                    Click="GlavnoeMenu_Click"/>
+        </StackPanel>
+    </DockPanel>
+</Window>

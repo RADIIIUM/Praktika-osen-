@@ -1,0 +1,56 @@
+﻿<Window x:Class="Praktika.OknoOrganizatora"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Praktika"
+        mc:Ignorable="d"
+        Title="OknoOrganizatora" 
+        Height="450"
+        Width="600"
+        MinHeight="450"
+        MinWidth="600"
+        WindowStyle="ToolWindow">
+    <DockPanel Background="{DynamicResource VtoroyCvet}"
+               LastChildFill="True">
+        <Label Style="{DynamicResource Paragraf1}"
+               Content="Окно Организатора"
+               DockPanel.Dock="Top"
+              />
+        <DockPanel LastChildFill="True">
+            <StackPanel DockPanel.Dock="Left"
+                        x:Name="LeviyStack">
+                <Image Height="200"
+                       Width="150"
+                       Margin="10"
+                       x:Name="Avatar"/>
+                <Button Content="Мой профиль"
+                        Style="{DynamicResource StilKnopki2}"
+                        Width="150"
+                        Click="Zaglushka_Click"/>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Right">
+                <Label Style="{DynamicResource Text1}"
+                       Content="Добрый день/утро/вечер!"
+                       HorizontalContentAlignment="Center"
+                       x:Name="SutkiText"/>
+                <Label Style="{DynamicResource Text1}"
+                       Content="Мр/Мс Имя!"
+                       HorizontalContentAlignment="Center"
+                       x:Name="Imya"/>
+                <Button x:Name="Meropriyatia"
+                        Style="{DynamicResource StilGlavnoyKnopki}"
+                        Content="Мероприятия"
+                        Click="Meropriyatia_Click"/>
+                <Button 
+                        Style="{DynamicResource StilGlavnoyKnopki}"
+                        Content="Участники"
+                        Click="Zaglushka_Click"/>
+                <Button 
+                        Style="{DynamicResource StilGlavnoyKnopki}"
+                        Content="Жюри"
+                        Click="Zaglushka_Click"/>
+            </StackPanel>
+        </DockPanel>
+    </DockPanel>
+</Window>

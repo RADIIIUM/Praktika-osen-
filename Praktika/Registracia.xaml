@@ -1,0 +1,150 @@
+﻿<Window x:Class="Praktika.Registracia"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Praktika"
+        xmlns:mtx ="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="Регистрация Жюри/Модератора" 
+        Height="470" 
+        Width="820"
+        MinHeight="470" 
+        MinWidth="820"
+        WindowStyle="ToolWindow"
+        Background="{DynamicResource VtoroyCvet}">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="250" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="FontSize" Value="20" />
+        </Style>
+        <Style TargetType="Label" BasedOn="{StaticResource Text1}" >
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="Margin" Value="0,3.5,0,0" />
+        </Style>
+        <Style TargetType="ComboBox" >
+            <Setter Property="Margin" Value="0,3,0,0" />
+            <Setter Property="Width" Value="250" />
+            <Setter Property="Height" Value="30" />
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+        <Label Style="{DynamicResource Paragraf1}"
+               Content="Регистрация жюри/модератора"
+               DockPanel.Dock="Top"/>
+        <DockPanel>
+            <DockPanel DockPanel.Dock="Left">
+
+                <StackPanel DockPanel.Dock="Left"
+                            HorizontalAlignment="Right">
+                    <Label
+                       Content="Id number: "
+                        />
+                    <Label Content="ФИО: "/>
+                    <Label Content="Пол: "/>
+                    <Label Content="Роль: "/>
+                    <Label Content="Email: "/>
+                    <Label  Content="Телефон: "/>
+                    <Label Content="Направление: "/>
+                    <Label Content="Мероприятия: "
+                           Margin="0,30,0,0"
+                           x:Name="LabelMeropriyatia"/>
+                </StackPanel>
+
+
+                <StackPanel DockPanel.Dock="Right"
+                            HorizontalAlignment="Right">
+                    <TextBlock Width="250"
+                               Height="30"
+                               FontSize="20"   
+                               Background="LightGray"
+                               Margin="0,10,0,0"
+                               Name="IdNumber"/>
+
+                    <TextBox Width="250"
+                               Height="30"
+                               x:Name="FIO"
+                               Background="LightGray"/>
+
+                    <ComboBox Width="250"
+                               Height="30"
+                               x:Name="Pol">
+                        <ComboBoxItem Content="Мужской" 
+                                      IsSelected="True"/>
+                        <ComboBoxItem Content="Женский" />
+                    </ComboBox>
+                    <ComboBox Width="250"
+                               Height="30"
+                               x:Name="Rol">
+                        <ComboBoxItem Content="Жюри" 
+                                      IsSelected="True" />
+                        <ComboBoxItem Content="Модераторы" />
+                    </ComboBox>
+
+                    <TextBox Width="250"
+                               Height="30"
+                               x:Name="Email"
+                               Background="LightGray"/>
+                    <mtx:MaskedTextBox
+                        x:Name="Telefon"
+                        Mask="+7 ( 000 )- 000- 00 - 00"
+                        FontSize="20"
+                        Margin="10,0,10,10"/>
+                    <ComboBox Width="250"
+                               Height="30"
+                               x:Name="Napravlenie"/>
+                    <CheckBox Content="Прикрепить к мероприятию"
+                              Margin="10"
+                              x:Name="PrikrepitMeropryatie"
+                              Unchecked="PrikrepitMeropryatie_Unchecked"
+                              Checked="PrikrepitMeropryatie_Checked" />
+
+                    <ComboBox Width="250"
+                               Height="30"
+                               x:Name="MeropriyatiyaCombo"
+                               />
+                    <StackPanel />
+                </StackPanel>
+            </DockPanel>
+
+
+            <StackPanel  DockPanel.Dock="Right">
+                <Image x:Name="Avatar"
+                       Height="200"
+                       Width="200"
+                       Margin="10"
+                       HorizontalAlignment="Right"/>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Right">
+                    <StackPanel>
+                        <Label Content="Пароль: "/>
+                        <Label Content="Повтор пароль: "/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left">
+                        <TextBox Width="200"
+                               x:Name="Parol"
+                               Background="LightGray"
+                                 />
+                        <TextBox Width="200"
+                                 Margin="-10,0,-10,0"
+                               x:Name="PovtorParola"
+                               Background="LightGray"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" 
+                            HorizontalAlignment="Right"
+                            Margin="0,10,0,0">
+                    <Button Style="{DynamicResource StilKnopki2}"
+                            x:Name="Ok"
+                            Content="ОК"
+                            Click="Ok_Click"/>
+                    <Button Style="{DynamicResource StilKnopki2}"
+                            x:Name="Otmena"
+                            Content="Отмена"
+                            Click="Otmena_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </DockPanel>
+    </DockPanel>
+</Window>

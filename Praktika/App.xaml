@@ -1,0 +1,15 @@
+﻿<Application x:Class="Praktika.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Praktika"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resursi/Temi/Cveta.xaml" />
+                <ResourceDictionary Source="Resursi/Temi/Knopki.xaml" />
+                <ResourceDictionary Source="Resursi/Temi/Texta.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
